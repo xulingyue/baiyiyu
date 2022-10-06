@@ -36,6 +36,32 @@ Before using this theme, you should accept themeforest licenses terms.-->
         <link rel="stylesheet" href="css/main_responsive.css">
         <link rel="stylesheet" href="css/style-font1.css">
         <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet" type="text/css">
+<style>
+        #model-box {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #center {
+            width: 300px;
+            height: 150px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        
+        #center div {
+            text-align: center;
+        }
+    </style>
         <script src="js/modernizr-2.7.1.min.js"></script>
 		<script src="js/sakura.js"></script>
 		<style type="text/css">
@@ -297,7 +323,14 @@ Before using this theme, you should accept themeforest licenses terms.-->
   </div>
   <div>
     <div class="right_triangle"></div>
-    <span><span style="color:#4C33E5;">那当然是<span style="color:#E53333;">魔主大人</span>啦~</span><span style="color:#4C33E5;"></span><br></span>
+    <span><span style="color:#4C33E5;">那当然是<span id="app" style="color:#E53333;" @click="like">魔主大人</span>啦~</span><span style="color:#4C33E5;"></span><br></span>
+<div id="model-box" v-show="isShow" @click.self="hideModel">
+            <div id="center">
+                <div>用户名：<input type="text"></div>
+                <div>密&nbsp;&nbsp;&nbsp;码：<input type="password" @keydown.13="login"></div>
+                <div><button>登录</button></div>
+            </div>
+        </div>
   </div>
 </div>
 <!-- 聊天样式over -->
@@ -412,5 +445,25 @@ Before using this theme, you should accept themeforest licenses terms.-->
             r.parentNode.insertBefore(e,r)}(window,document,"script","ga"));
             ga("create","UA-XXXXX-X");ga("send","pageview");
         </script>-->
+<script>
+        new Vue({
+            el: "#app",
+            data: {
+                isShow: false
+            },
+            methods: {
+                like() {
+                    this.isShow = true;
+                },
+                hideModel() {
+                    this.isShow = false;
+
+                },
+                login(event) {
+                    alert("登录")
+                }
+            }
+        })
+    </script>
     </body>
 </html>
