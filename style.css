@@ -76,7 +76,7 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
 @media screen and (max-width: 992px){
     #he-plugin-simple{ display: none !important; }
     .banner-video video{width:1200px; }
-    .banner-video img{width:1200px; }
+    .banner-video img{width:400px; }
     div#navbarsExample05 { background: rgba(0, 0, 0, 0.8); padding: 10px 30px; border-radius: 20px;}
 }
 @media screen and (max-width:767px){
