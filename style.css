@@ -81,7 +81,7 @@ svg.icon { width: 14px; height: 14px; margin: 0 5px 0 8px; vertical-align: -0.15
 }
 @media screen and (max-width:767px){
     .banner-video video{width:960px; }
-    .banner-video img{width:100%; }
+    .banner-video img{width:400px; }
     .s-type-list label{padding:5px 0}
     .search-type{overflow:hidden}
     .search-list{height:30px;overflow-y:hidden;overflow-x:scroll;white-space:nowrap}
